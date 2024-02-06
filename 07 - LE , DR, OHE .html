@@ -1,0 +1,42 @@
+
+
+
+Kernel   --- software   +   hardware
+
+PID
+
+Feature Selection : 
+
+In a Model every input should be of integer 
+
+Label Encoding  = string to integer conversion 
+
+Data Reprocessing 
+
+from sklearn-preprocessing import LabelEncoder
+
+Z = LabelEncoder ()
+
+key = z.fit_transform( Feature_name )
+
+OneHotEncoder   it is to create Dummy variables
+feature_ohe = OneHotEncoder()
+
+feature_ohe.fit_transform(key)
+
+
+convert variable to 2D  using  .toaray()
+
+Dummy varaiables trap   --- neglecting Columns
+
+Multicollinearity  --- highely related independent varaiables
+
+variable Trap --- When we create a dummy variable using OHE. in default it creates 3 set of dummy variables in all 3 only two will impact so we neglect the third set
+
+numpy.hstack   :  it is used to horizontally stack arrays or matrices along their columns. The "hstack" stands for "horizontal stack."
+
+numpy.vstack  :   it is used to vertically stack arrays or matrices along their rows. The "vstack" stands for "vertical stack."
+
+fit model
+
+predict
