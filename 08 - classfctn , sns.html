@@ -1,0 +1,48 @@
+
+
+
+Classification :  classification is a type of supervised learning task where the goal is to predict the categorical class label of new instances based on past observations with known class labels. The output variable in classification is discrete and represents different categories or classes.
+
+  
+ Binary Classification : Binary classification is a type of supervised learning task in machine learning where the goal is to classify instances into one of two classes or categories. The output variable in binary classification is discrete and can take on only two possible values, often denoted as positive (1) and negative (0).
+ 
+		Ex :  Male / Female    Pass/ Fail    
+		
+Kaggle  --- for downloading Datasets 
+
+dataset.head(10)    ---- for first 10 rows in Dataset
+
+dataset.tail(10) ----- for last 10 rows in Dataset
+
+
+Dataset --> Feature Selection ---> Data Preprocess  ---> Model  ---> Accuracy  --> prediction 
+
+	
+	Feature Selection   1. manual
+						2. Automatic    ------ Lasso  , NN
+						3. EDA
+						
+	
+	import  seaborn as sns
+	
+	sns.countplot(feature)      ------    Gives bargraph individually 
+	
+	sns.countplot(dataset['Feature'] , hue='kind' , data=dataset )
+	
+	we can get graphical representation each kind of data of that feature  in Dataset
+	
+	
+	For Filling Missing Data
+	
+		import Pandas   
+		
+		dataset.isnull()
+		
+		sns.heatmap(dataset.isnull())
+		
+		
+If there are morethan 1 feature having null data  remove other columns except one and use one after another
+
+take the average of each kind of each feature and fill the average value at the place of null
+
+ctrl + shift + L  to enable  edit in Excel
