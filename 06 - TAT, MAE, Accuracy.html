@@ -1,0 +1,32 @@
+
+Test and Train
+
+
+70% of dataset will be trained and 30% of Dataset will be tested for an ideal model
+
+we import train-test-split from sklearn to divide the training and testing data from the dataset 
+
+Scikit-learn, often abbreviated as sklearn, is a popular machine learning library in Python that provides simple and efficient tools for data analysis and modeling. 
+		It is built on top of other scientific computing libraries such as NumPy, SciPy, and matplotlib and is designed to work seamlessly with these libraries.
+		
+		
+Accuracy  =  ( Prediction / Actual ) * 100
+
+
+initializers for bias and weight will be  0 , 0  and varies untill loss becomes Zero or Minimum
+
+initializers are functions or strategies used to initialize the parameters of a model before training. 
+	These parameters typically include weights and biases in neural network layers or coefficients in linear models		
+	
+	
+	Mean Absolute Error ( MAE ) = [( y1 - y^1 ) + ( y2 - y^2) + ( y3 - y^3 ) + .....+ (yn - y^n )] / n
+	
+	
+	y_pred  = model( x_test )
+	
+	metrics are quantitative measures used to evaluate the performance of a model on a dataset. 
+		These metrics provide insights into how well the model is performing in terms of various aspects such as accuracy, precision, recall, F1-score, and others, depending on the type of task (e.g., classification, regression, clustering).
+		
+		import metrics from sklearn 
+		metrics.mean_absolute_error ( y_test , y_pred )
+		
