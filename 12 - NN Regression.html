@@ -1,0 +1,36 @@
+
+
+pip install keras
+
+dataset = Gender: Weight : Height
+
+Regression using Neural Networks
+
+pip install tensorflow
+
+conda install tensorflow
+
+from keras.models import Sequential
+model = Sequential()
+form kersa.layers import Dense
+model.get_config() --- info of layers
+
+model.add ( Dense
+      ( units = 1 , activation = " linear " ,
+        kernel_initializers = "zeroes" ,
+        bias_initializers = "zeroes" ,
+        input_shape = (1,0)
+      )
+          )
+
+  model.summary()
+
+
+=> cost function / erros / loss function
+
+model.compile ( loss = "mean_squared_error" , Optimizer = "Adam" )
+model.fit(x , y)
+model.get_weights()  --> gives the value of b and w
+model.save( "first_keras.h5")
+model.get_layers( " Dense" )  --> info of specific layer
+
