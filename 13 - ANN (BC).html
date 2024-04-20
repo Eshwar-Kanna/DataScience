@@ -1,0 +1,22 @@
+
+
+                                    Artificial Neural Network
+
+
+  dataset = pd.read_csv("Pima_diabatics.csv" , header = None)
+          => we use header=None when their are no headings for the dataset and then the 1st will also be treated as row
+
+=> the models removes the features that are not much effecting on the weight
+=> Neurons that are not having effective weight are removed and effective neurons are considered
+=> As the no. of layers increases the time increases
+=> Activation function is used at the final neuron according to the type of operation needed such as regression and classification 
+=> When we consider more than one layer then the activation function of all layer till last are " relu " and the input shape is
+    not needed fromm second
+=> code remains same till dense layers as previous model
+
+  model.compile ( optimizer = "adam" , loss = "binary_crossentropy")
+  model.fit( x , y )
+  activation  = "sigmoid"  for classification
+
+
+  
