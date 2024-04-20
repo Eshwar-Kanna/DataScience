@@ -1,0 +1,38 @@
+
+
+                                Multiclassification in NN
+
+  softmax is the math function used for multi-classification 
+
+  Dataset = Wines.csv
+
+  aggregating  -> counting each category  -> y.value_counts()
+  pd.get_dummies(y)  --> since model cannot create pattern for it here we dont neglect one column as trapping because 
+          these are the values of y . We neglect for x 
+
+  import seaborn as sns
+  sns.scatterplot ( x = '' , y = 'y' , data = dataset )
+        here we get the graph of y categories
+
+  => In multi classification the no.of neurons in last layer is equal to no.of categories of y
+
+  => kernel_initializers  = "he_normal"
+
+  => Bydefault keras use Glorot and Xavier initializers
+
+  => for Multi classification loss = " categorical_crossentropy " , metrics = ["accuracy"] , activation = "softmax"
+
+  model.fit ( x , y  , epochs = 100 )
+
+  => no. of epochs is giving or training the same dataset for mentioned no.of times hence the loss decreases. 
+we decrease the no. of epochs where loss not reduced.
+
+  => model.history.history    ----> loss of each epoch
+
+  => myloss  = model.history.history["loss"]
+
+          pd.DataFrame(myloss) = myloss
+
+          myloss.plot()
+
+          
