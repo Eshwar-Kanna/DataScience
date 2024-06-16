@@ -4,19 +4,64 @@
 
 
   dataset = pd.read_csv("Pima_diabatics.csv" , header = None)
-          => we use header=None when their are no headings for the dataset and then the 1st will also be treated as row
+          => we use header=None when their are no headings for the dataset and then the 1st will also be treated as data
 
 => the models removes the features that are not much effecting on the weight
 => Neurons that are not having effective weight are removed and effective neurons are considered
 => As the no. of layers increases the time increases
-=> Activation function is used at the final neuron according to the type of operation needed such as regression and classification 
+=> Activation function is used at the final layer according to the type of operation needed such as regression and classification 
 => When we consider more than one layer then the activation function of all layer till last are " relu " and the input shape is
-    not needed fromm second
+    not needed from second
 => code remains same till dense layers as previous model
 
   model.compile ( optimizer = "adam" , loss = "binary_crossentropy")
   model.fit( x , y )
-  activation  = "sigmoid"  for classification
+  activation  
+              "sigmoid"  for classification
+              "Tanh"  for ( RNN ) sequence prediction
+              "ReLu" for ( CNN ) hidden layers and computer vision tasks
+
+    Loss Functions
+
+      Mean Squared Error  -> Regression problems where the goal is to predict continuous values.
+      Mean Absolute Error -> Regression problems, especially when dealing with outliers ( Predicting sales numbers )
+      Huber Loss -> Regression problems where you need robustness to outliers.
+      Binary Cross-Entropy -> Binary classification problems.
+      Categorical Cross-Entropy -> Multi-class classification problems with one-hot encoded labels.
+      Sparse Categorical Cross-Entropy -> Multi-class classification with a large number of classes.
+      Kullback-Leibler Divergence -> Problems involving probability distributions
+      Hinge Loss -> "Maximum-margin" Binary classification, primarily used with support vector machines (SVMs).
 
 
-  
+   Optimizers
+
+      SGD -> Simple and small models, or when computational resources are limited.
+      Adam -> Deep learning models, especially when dealing with large datasets and high-dimensional parameter spaces.
+      RMSProp -> Recurrent neural networks (RNNs) and other networks where the learning rate needs to adapt during training.
+      AdaGrad -> Sparse data problems, such as text or natural language processing tasks.
+      Adadelta -> Same as AdaGrad but with a more robust learning rate adjustment.
+      Nadam -> Deep learning models, similar to Adam but with potential improvements in convergence speed.
+
+Table summary for Loss functions
+
+    Mean Squared Error (MSE)	        ->  Regression	                                  ->  Predicting house prices
+    Mean Absolute Error (MAE)         -> 	Regression with outliers	                    -> Predicting sales numbers
+    Huber Loss	                      ->  Regression with robustness to outliers	      ->  Predicting stock prices with anomalies
+    Binary Cross-Entropy	            ->  Binary classification                         -> 	Spam detection
+    Categorical Cross-Entropy	        ->  Multi-class classification	                  -> Image classification
+    Sparse Categorical Cross-Entropy  -> 	Multi-class classification with many classes  -> 	Text document classification
+    KL Divergence	                    ->  Probability distribution comparison	          ->  Variational autoencoders
+    Hinge Loss	                      ->  Binary classification (SVM)                 	->  Text sentiment classification
+
+
+Table summary for Optimizers
+
+    SGD	        ->   Simple/small models, limited resources     -> 	Linear regression, logistic regression
+    Adam	      ->   Deep learning models, large datasets	      ->  CNNs for image recognition, RNNs for NLP
+    RMSProp     -> 	 Adaptive learning rate needs	              ->  Time-series forecasting
+    AdaGrad	    ->   Sparse data problems	                      ->  Text classification
+    Adadelta	  ->   Sparse data, improved AdaGrad	            ->  NLP tasks
+    Nadam	      ->   Deep learning models, faster convergence   ->	Advanced deep learning models
+
+
+    
