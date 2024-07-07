@@ -1,0 +1,19 @@
+
+          Instead loading a csv file from the local downloads we can load existing datasets from the pandas library.
+
+iris.target : holds the class labels for each of the samples in the dataset 
+         0: Iris setosa , 
+         1: Iris versicolor , 
+         2: Iris virginica
+
+iris.feature_names : provides the names of the features (attributes) for the Iris dataset and it is same as columns 
+iris.DESCR : provides a detailed description of the Iris dataset
+iris.filename : provides the path of the file from which the dataset is loaded
+iris.target_names : provides the names of the target classes for the Iris dataset
+
+ 
+for CSV datasets the columns attribute considers the first row as columns bydefault. unless header=None is specified
+dataset['var'] = iris.target  # adding a colum to  dataset  with values of iris.target and naming header as var 
+
+While adding multiple layers at single interpretation.We cannot add multiple layers using model.add() function
+Only either using Sequential([layers]) or var = [layers] and model=Sequential(var)
