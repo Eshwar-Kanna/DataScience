@@ -1,0 +1,32 @@
+
+If the validation_accuracy is greater than Accuracy then the model is said to be overfitting
+We follow two techniques to overcome the overfitting
+    1. Dropout
+    2. Regularization ---> i. Lasso  ii. Ridge
+
+
+Low Bias and the Low Variance is the best model to consider
+Residue = Actual value  - Predicted Value    ( y - y^ )
+We find the Bias value in Training Data and Variance Value in Testing data
+
+The Final target is to find the best suite line which passes through or closer to all the values of y with respect to x which results in best model.
+=> Achieve low Bias in Training
+=> Achieve Low Variance in Testing
+
+High variance occurs when the data is different in Training and Testing datset. Model creates a pattern according to the trained datset and if the 
+    pattern for testing is different it results in High Variance
+
+Kernel_regularizer :
+
+Dropout: Removing or neglecting few neurons in each Layer from participating in training to reduce the time of training and overcome overfitting.
+
+Ex: Dropout(0.50)   here 0.50 is rate which is defined as 50%
+
+=> To decrease the Accuracy of Training to lower the Difference between Training and Testing We use cost function = MAE + λw  or MAE + λw²
+    depends on dataset and loss in model
+
+=> one complete row of datset includes x and y called a Batch . A complete batch is equal to 1 epoch
+=> The process of using weight in decreasing Accuracy is called Peralization
+=> If the value of weight taken as w then it is L1 Regularization ( Lasso ) and If its w² then L2 Regularization  = Redges 
+
+    Mostly L2 Regularization is used in Peralization.
