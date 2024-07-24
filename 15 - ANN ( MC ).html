@@ -36,3 +36,9 @@ we decrease the no. of epochs where loss not reduced.
           myloss.plot()
 
           
+=> whenever a data split into train and test data and if the accuracy of the model for trained data is 90% and for testing is around 50%  then this 
+      process of training is called Overfitting
+=> To overcome the overfitting we check Accuracy while fitting the model by splitting the adata in various Percentage.
+        model.fit( x , y , epochs=  , validation_split=0.20)
+
+=> If the Accuracy of the model for both training set and the testing set is equal or similar then the model is called Generalized model.
