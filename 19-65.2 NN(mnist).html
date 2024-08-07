@@ -1,1 +1,12 @@
+The MNIST (Modified National Institute of Standards and Technology) dataset is a widely used benchmark in the field of machine learning and computer vision
 
+The dataset contains 70,000 grayscale images of handwritten digits (0-9), each of size 28x28 pixels. This includes 60,000 images for training and 10,000 images for testing.
+
+Machine learning models, especially neural networks, often perform better when input data is normalized. 
+Normalization typically involves scaling the data to a range (e.g., 0 to 1 or -1 to 1). 
+For example, pixel values in the MNIST dataset, which range from 0 to 255, can be scaled to a range of 0 to 1 by dividing by 255. 
+This requires the values to be in floating-point format.
+
+ to_categorical is used to convert class vectors (integers) to binary class matrices / class labels to one-hot encoded vectors.
+
+ 
