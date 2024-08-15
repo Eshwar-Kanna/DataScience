@@ -1,1 +1,44 @@
-cnn
+Tuning : process of optimizing hyperparameters of a model to improve its performance on a given dataset.
+
+=> The image data will be converted to text, with each piece of text being assigned a unique number.
+=> Every pixel in the image is treated as an individual record or column.
+=> Yann LeCun is often referred to as the father of deep learning.
+=> When using input_dim instead of input_shape, you should provide the shape as [None, ...]. For example: model.predict(x_test_1d[2:3][None, ...]).
+=> It is necessary to convert multi-dimensional data into one-dimensional form before feeding it into a Dense layer. A pre-built function called Flatten is used for this purpose.
+
+  Convolve  ----  Pooling ----- Flattening  ------  Hidden layers ( Neural Networks ) 
+  | --------------- CNN ------------------|         
+
+=> In an image, each pixel is treated as an individual feature. For example, an image with 25 pixels corresponds to 25 features, represented as x1, x2, x3, x4 ...x25 , which equals 25 columns.
+
+=> Larger images with more pixels result in a higher number of features, leading to larger weight matrices that require more computation and time. To reduce the number of features, we can combine neighboring pixels into a single pixel, a process that should be done carefully to minimize loss of information.
+
+=> Pooling is a technique used to reduce the dimensionality of an image by down-sampling it, which involves combining the values of neighboring pixels. The size of the pooling window (pool size) is crucial and should be chosen appropriately.
+
+=> Pooling is the process used to convert larger images into smaller, more manageable pixel representations.
+
+=> Feature learning refers to the process of identifying the most important features necessary for recognizing an entity in an image and selecting those features.
+
+=> Convolution is used to select and emphasize the important features from an image, allowing the model to focus on the most relevant aspects for classification or recognition.
+
+=> edge detection : a technique in image processing used to identify and locate sharp changes in intensity, which correspond to boundaries or edges of objects within an image.
+
+  Image  --------  Convolve ----------------- Pooling  -----------------  Flatten ------------ Neural Networks   ---------- y
+
+              ( Feature selection )    ( 10 * 10  - 5 * % )             2D  to 1D            
+                        or
+
+              ( Feature Extarction )
+
+
+=> The convolutional layer extracts important features from an image by applying filters that detect patterns 
+  such as edges, textures, and shapes, which are essential for tasks like image recognition and classification.
+
+=>  Image-net.org : a large-scale image database designed for use in visual object recognition research.
+=>  Alexnet    , lenet   
+
+
+
+=> Activation layers : apply activation functions to the outputs of neurons from the preceding layer. 
+  These functions introduce non-linearity into the network, which is essential for learning complex patterns and making accurate predictions.
+
