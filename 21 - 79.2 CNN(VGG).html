@@ -1,0 +1,19 @@
+
+
+      VGG Visual Geometr Group   ( 16 , 19 )
+
+      We use a library called PIL for image processing from a source library pillow in similar to CV2 from openCV.
+      We have the image feature in the keras but even keras uses PIL behind
+      ILSVRC conducted a challenger to create model with a dataset of 10,000 classes and effecient prediction. VGG won the challenge with more than 90% of accuracy.
+      VGG 16 indicates 16 layers in the model and VGG 19 as 19 layers
+
+
+      Amazon Sagemaker:
+
+      The predicting image should be of same size and shape in similar to the images we trained to the model. for which we use a parameter target_size(). 
+
+      We can get the image size from the layer 1. If the shape is (None , 224 , 224 , 3) which represents 4D then the target_size(224  , 224 ) will be used for the predicting image.
+
+      We have a precreated functions in PIL for converting the image to desired shape. preprocessing_input and decode_predictions to retrive the name from the predicted values.
+
+      
