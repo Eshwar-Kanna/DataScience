@@ -16,3 +16,13 @@ Build Model (weights)
 For TRansfeRRING THE LEARNING WE Should set all the upper layers trainable = False 
 
 model.layers[0].trainable = False
+
+for i in model.layers :
+    i.trainable = False
+
+
+=> output layers are also called as top layers 
+
+include_top = False # for removing the output layer and we see it in summary
+
+We make all old layers trainable to False and add new layers 
