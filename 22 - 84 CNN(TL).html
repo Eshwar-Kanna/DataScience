@@ -1,0 +1,18 @@
+
+
+Transfer Learning:
+Tuning:
+
+Net (design 
+Build Model (weights)
+
+=> The precreated models has the fixed weight that they created with the model
+=> If we had a requirement adding custom class of dataset for which we dont have weights in it. such cases we can use the precreated and we we train with our new class images
+    or new category images
+
+=> here we are transfering the learnings of a precreated model to an other model
+=> we remove only the last layer and add the layers according to the requirement
+
+For TRansfeRRING THE LEARNING WE Should set all the upper layers trainable = False 
+
+model.layers[0].trainable = False
